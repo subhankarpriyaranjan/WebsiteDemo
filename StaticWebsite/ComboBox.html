@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Combo Box Example</title>
+</head>
+<body>
+
+	<select id="mySelect" onchange="updateTextFields()">
+		<option value="option1">Option 1</option>
+		<option value="option2">Option 2</option>
+		<option value="option3">Option 3</option>
+		<option value="option4">Option 4</option>
+	</select>
+	<br><br>
+<table>
+	<tr>
+	<td>
+	
+	<input type="text" id="textField1">
+</td>
+</tr>
+<tr>
+	<td>
+	
+	<input type="text" id="textField2">
+</td>
+</tr>
+<tr>
+	<td>
+
+	<input type="text" id="textField3">
+</td>
+</tr>
+<td>
+
+	<input type="text" id="textField4">
+</td>
+</table>
+
+	<script>
+		function updateTextFields() {
+			// Get the selected option from the combo box
+			var selectedOption = document.getElementById("mySelect").value;
+
+			// Update the first text field with the selected option
+			document.getElementById("textField1").value = selectedOption;
+
+			// Update the other text fields based on the selected option
+			if (selectedOption === "option1") {
+				document.getElementById("textField2").value = "Option 1 Value 1";
+				document.getElementById("textField3").value = "Option 1 Value 2";
+				document.getElementById("textField4").value = "Option 1 Value 3";
+			} else if (selectedOption === "option2") {
+				document.getElementById("textField2").value = "Option 2 Value 1";
+				document.getElementById("textField3").value = "Option 2 Value 2";
+				document.getElementById("textField4").value = "Option 2 Value 3";
+			} else if (selectedOption === "option3") {
+				document.getElementById("textField2").value = "Option 3 Value 1";
+				document.getElementById("textField3").value = "Option 3 Value 2";
+				document.getElementById("textField4").value = "Option 3 Value 3";
+			} else if (selectedOption === "option4") {
+				document.getElementById("textField2").value = "Option 4 Value 1";
+				document.getElementById("textField3").value = "Option 4 Value 2";
+				document.getElementById("textField4").value = "Option 4 Value 3";
+			}
+		}
+	</script>
+
+</body>
+</html>

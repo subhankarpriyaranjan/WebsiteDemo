@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+
+body{
+
+    background-color: bisque;
+}
+
+.container {
+    display: flex;
+  }
+
+    
+  .content, .content2 {
+    flex-basis: 50%;
+  }
+  
+.content{
+font-size: 20px;
+text-align: left;
+
+}
+
+.content2{
+    text-align: right;
+    font-size: 20px;
+    
+    
+    }
+    
+
+    video {
+      width: 100%;
+      height: auto;
+    }
+    video::-webkit-media-controls {
+      display:none !important;
+    }
+    
+    video::-webkit-media-controls-enclosure {
+      display:none !important;
+    }
+    
+    video::-webkit-media-controls-panel {
+      display:none !important;
+    }
+
+/* content animation */
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.content{
+  animation:slide-in 1s ease-in-out;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%, -20%); /* Add this line to center the button horizontally and vertically */
+  z-index: 1; /* Add this line to ensure the button appears on top of the video */
+
+  background-color: red;
+  color: white;
+  font-size: 18px;
+  padding: 13px 40px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+.btn:hover {
+  background-color: white;
+  color: red;
+}
+
+.header-text{
+  
+    background-color:#696969;
+    color:white;
+      text-align:center;
+      
+      font-family: 'poppins',sans-serif;
+      text-decoration: none;
+}
+
+.container{
+  max-width: 1180px;
+  margin-inline: auto;
+  padding-inline: ;
+}

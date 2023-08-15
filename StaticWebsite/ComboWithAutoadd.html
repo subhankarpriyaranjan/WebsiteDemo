@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Combo Box Example</title>
+</head>
+<body>
+
+	<select id="mySelect" onchange="updateTable()">
+		<option value="option1">Option 1</option>
+		<option value="option2">Option 2</option>
+		<option value="option3">Option 3</option>
+		<option value="option4">Option 4</option>
+	</select>
+	<br><br>
+
+	<table id="myTable">
+		<tr>
+			<th>Selected Option</th>
+			<th>Value 2</th>
+			<th>Value 3</th>
+			<th>Value 4</th>
+		</tr>
+	</table>
+
+	<script>
+		function updateTable() {
+			// Get the selected option from the combo box
+			var selectedOption = document.getElementById("mySelect").value;
+			// Create a new row in the table
+			var table = document.getElementById("myTable");
+			var row = table.insertRow(-1);
+
+			// Add cells to the new row
+			var optionCell = row.insertCell(0);
+			var value2Cell = row.insertCell(1);
+			var value3Cell = row.insertCell(2);
+			var value4Cell = row.insertCell(3);
+
+			// Update the cells with the selected option and related values
+			optionCell.innerHTML = selectedOption;
+			if (selectedOption === "option1") {
+				value2Cell.innerHTML = "Option 1 Value 1";
+				value3Cell.innerHTML = "Option 1 Value 2";
+				value4Cell.innerHTML = "Option 1 Value 3";
+			} else if (selectedOption === "option2") {
+				value2Cell.innerHTML = "Option 2 Value 1";
+				value3Cell.innerHTML = "Option 2 Value 2";
+				value4Cell.innerHTML = "Option 2 Value 3";
+			} else if (selectedOption === "option3") {
+				value2Cell.innerHTML = "Option 3 Value 1";
+				value3Cell.innerHTML = "Option 3 Value 2";
+				value4Cell.innerHTML = "Option 3 Value 3";
+			} else if (selectedOption === "option4") {
+				value2Cell.innerHTML = "Option 4 Value 1";
+				value3Cell.innerHTML = "Option 4 Value 2";
+				value4Cell.innerHTML = "Option 4 Value 3";
+			}
+		}
+	</script>
+
+</body>
+</html>

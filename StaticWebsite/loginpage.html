@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div class="login-box">
+        <h2>
+            LOGIN </h2>
+<form>
+            <div class ="user-box">
+                <input type="text" name="username"  required>
+<label> Username</label>
+                
+            </div>
+            <div class="user-box">
+                <input type ="text" name="password"  reqired>
+                <label> Password  
+
+                </label>
+               
+    </div>
+
+    <button type="submit"> Submit </button>
+</form>
+    </div>
+
+
+    
+    <style>
+login-box {
+  margin: auto;
+  width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #ccc;
+}
+
+.login-box h2 {
+  margin-top: 0;
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.user-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  background: transparent;
+}
+
+.user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #ff0000;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.user-box input:focus ~ label,
+.user-box input:valid ~ label {
+  top: -20px;
+  font-size: 12px;
+  color: #441de1;
+}
+
+button[type="submit"] {
+  display: block;
+  margin: auto;
+  width: 100px;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+button[type="submit"]:hover {
+  background-color: #555;
+}.user-box input:focus ~ label,
+.user-box input:valid ~ label {
+  top: -20px;
+  font-size: 12px;
+  color: #333;
+}
+
+button[type="submit"] {
+  display: block;
+  margin: auto;
+  width: 100px;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+button[type="submit"]:hover {
+  background-color: #555;
+}
+
+body{
+
+    background-color:goldenrod;
+}
+
+    </style>
+</body>
+</html>
